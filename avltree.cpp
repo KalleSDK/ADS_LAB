@@ -226,13 +226,13 @@ Node* deleteNode(Node* root, int key)
 }
 
 
-void preOrder(Node *root)
+void InOrder(Node *root)
 {
 	if(root != NULL)
 	{
-		preOrder(root->left);
+		InOrder(root->left);
 		cout << root->key << " ";
-		preOrder(root->right);
+		InOrder(root->right);
 	}
 }
 
@@ -251,7 +251,7 @@ int main()
 
 	cout << "Preorder traversal of the "
 			"constructed AVL tree is \n";
-	preOrder(root);
+	InOrder(root);
 	
 	return 0;
 }
